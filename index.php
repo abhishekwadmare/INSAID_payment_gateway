@@ -13,19 +13,13 @@
 
 
 <div class="container-fluid" style="margin-top: 50px;">
-       
+
+        <!-- this file will show all the available programs -->
         <?php include "includes/programs_provided.php"; ?>
+
+        <!-- this file will generate payment form for selected program -->
         <?php include "includes/payment_forms.php"; ?>
 
-    <div class="row">
-        
-        
-    </div>
-
-
-    <div class="row">
-        
-    </div>
 </div>
 
 <!-- Added footer -->

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 05, 2020 at 06:20 PM
+-- Generation Time: Oct 05, 2020 at 07:00 PM
 -- Server version: 5.7.31-0ubuntu0.18.04.1
 -- PHP Version: 7.2.24-0ubuntu0.18.04.6
 
@@ -43,7 +43,9 @@ CREATE TABLE `registrations` (
 --
 
 INSERT INTO `registrations` (`id`, `name`, `email`, `registration_date`, `program`, `course_batch`, `amount_paid`, `payment_id`, `order_id`) VALUES
-(1, 'Abhishek Wadmare', 'abhishek.wadmare@yahoo.com', '2020-10-05 12:41:54', 'Global Certificate in Data Science & AI', '25_October_1005', 300000, 'pay_FlDrDhnTdl32qz', 'order_FlDquVBMxHl7bn');
+(1, 'Abhishek Wadmare', 'abhishek.wadmare@yahoo.com', '2020-10-05 12:41:54', 'Global Certificate in Data Science & AI', '25_October_1005', 300000, 'pay_FlDrDhnTdl32qz', 'order_FlDquVBMxHl7bn'),
+(2, 'Shreyas Ikhar', 'shreyas@gmail.com', '2020-10-05 13:27:54', 'Global Certificate in Data Science & AI', '25_October_1005', 300000, 'pay_FlEhhJPKww5IkW', 'order_FlEh6fx9CcZd4m'),
+(3, 'Gautam Helange', 'gautam@hotmail.com', '2020-10-05 13:29:35', 'Certificate in Data Science Foundation', '25_October_1005', 300000, 'pay_FlEjWc8oQziEgZ', 'order_FlEj9iLF3bFjLv');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +65,7 @@ ALTER TABLE `registrations`
 -- AUTO_INCREMENT for table `registrations`
 --
 ALTER TABLE `registrations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

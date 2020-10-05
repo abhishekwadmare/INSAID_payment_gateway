@@ -90,10 +90,11 @@ input.razorpay-payment-button {
     height: 43.5px;
     border-radius: 5px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.5);
-    border: solid 3px #f5a623;
-    background-image: linear-gradient(to bottom, #fad961, #f76b1c);
-    font-size: 18px;
+    border: solid 3px #337ab7;
+    background-color: #337ab7;
+    font-size: 16px;
     font-weight: bold;
+    color: white;
 }
 @media (min-width: 1200px)
 {

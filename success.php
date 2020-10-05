@@ -61,84 +61,84 @@ if (empty($_POST['razorpay_payment_id']) === false)
         <?php include "includes/header.php"; ?>
 
     </head>
-<body>
+    <body>
 
-    <!-- Added Navbar -->
-    <?php include "includes/navbar.php"; ?>
+        <!-- Added Navbar -->
+        <?php include "includes/navbar.php"; ?>
 
 
-<div class="container" style="margin-top: 50px;">
+        <div class="container" style="margin-top: 50px;">
 
-    <div class="row">
-        <?php if ($success === true)
-            {
-                $registration_query = "INSERT INTO registrations(name, email, program, course_batch, amount_paid, payment_id, order_id) ";
-                $registration_query .= "VALUES('{$fullName}', '{$email}', '{$pname}', '{$batch}',{$amount},'{$_POST['razorpay_payment_id']}','{$_POST['razorpay_order_id']}')";
-                $registration_query_result = mysqli_query($connection, $registration_query);
-        ?>          
-        <div class="alert alert-success">
-            <strong>Thank You!</strong> You have successfully registered for the program <strong><?php echo $pname;?></strong>. You will recive a mail within 5 minutes.
+            <div class="row">
+                <?php if ($success === true)
+                    {
+                        $registration_query = "INSERT INTO registrations(name, email, program, course_batch, amount_paid, payment_id, order_id) ";
+                        $registration_query .= "VALUES('{$fullName}', '{$email}', '{$pname}', '{$batch}',{$amount},'{$_POST['razorpay_payment_id']}','{$_POST['razorpay_order_id']}')";
+                        $registration_query_result = mysqli_query($connection, $registration_query);
+                ?>          
+                <div class="alert alert-success">
+                    <strong>Thank You!</strong> You have successfully registered for the program <strong><?php echo $pname;?></strong>. You will recive a mail within 5 minutes.
+                </div>
+                </br>
+
+                <table class="table table-striped table-hover">
+                    <tbody>
+                        <tr>
+                            <td>Your Name</td>
+                            <td><?php echo $fullName;?></td>
+                        </tr>
+                        <tr>
+                            <td>Email ID </td>
+                            <td><?php echo $email;?></td>
+                        </tr>
+                        <tr>
+                            <td>Date of Registration</td>
+                            <td><?php echo date("d/m/Y");?></td>
+                        </tr>
+                        <tr>
+                            <td>Program Name</td>
+                            <td><?php echo $pname;?></td>
+                        </tr>
+                        <tr>
+                            <td>Course Batch</td>
+                            <td><?php if($batch == '25_October_1005') echo "October 18, 2020";?></td>
+                        </tr>
+                        <tr>
+                            <td>Amount Paid</td>
+                            <td><?php echo $amount/100;?></td>
+                        </tr>
+                        <tr>
+                            <td>Payment ID</td>
+                            <td><?php echo $_POST['razorpay_payment_id'];?></td>
+                        </tr>
+                        <tr>
+                            <td>Order ID</td>
+                            <td><?php echo $_POST['razorpay_order_id'];?></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <?php } else {
+
+                    $html = "<p>Your payment failed</p>
+                    <p>{$error}</p>";
+                    
+                    ?>
+
+                <div class="alert alert-danger">
+                    <php? echo $html; ?>
+                </div>
+                <?php } ?>
+        
+                <center><a class="btn btn-primary" href="index.php">
+                        Apply to more Programs
+                    </a>
+                </center>
+            </div>
+
         </div>
-        </br>
 
-        <table class="table table-striped table-hover">
-            <tbody>
-                <tr>
-                    <td>Your Name</td>
-                    <td><?php echo $fullName;?></td>
-                </tr>
-                <tr>
-                    <td>Email ID </td>
-                    <td><?php echo $email;?></td>
-                </tr>
-                <tr>
-                    <td>Date of Registration</td>
-                    <td><?php echo date("d/m/Y");?></td>
-                </tr>
-                <tr>
-                    <td>Program Name</td>
-                    <td><?php echo $pname;?></td>
-                </tr>
-                <tr>
-                    <td>Course Batch</td>
-                    <td><?php if($batch == '25_October_1005') echo "October 18, 2020";?></td>
-                </tr>
-                <tr>
-                    <td>Amount Paid</td>
-                    <td><?php echo $amount/100;?></td>
-                </tr>
-                <tr>
-                    <td>Payment ID</td>
-                    <td><?php echo $_POST['razorpay_payment_id'];?></td>
-                </tr>
-                <tr>
-                    <td>Order ID</td>
-                    <td><?php echo $_POST['razorpay_order_id'];?></td>
-                </tr>
-            </tbody>
-        </table>
-        <?php } else {
+    <!-- Added footer -->
+    <?php include "includes/footer.php"; ?>
 
-            $html = "<p>Your payment failed</p>
-            <p>{$error}</p>";
-            
-            ?>
-
-        <div class="alert alert-danger">
-            <php? echo $html; ?>
-        </div>
-        <?php } ?>
-    
-        <center><a class="btn btn-primary" href="index.php">
-                Apply to more Programs
-            </a>
-        </center>
-    </div>
-
-</div>
-
-<!-- Added footer -->
-<?php include "includes/footer.php"; ?>
-
-</body>
+    </body>
 </html>

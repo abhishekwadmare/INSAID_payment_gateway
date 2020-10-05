@@ -4,22 +4,24 @@
         <?php include "includes/header.php"; ?>
 
     </head>
-<body>
+    <body>
 
-    <!-- Added Navbar -->
-    <?php include "includes/navbar.php"; ?>
+        <!-- Added Navbar -->
+        <?php include "includes/navbar.php"; ?>
 
 
-<div class="container" style="margin-top: 50px;">
+        <div class="container" >
+            <div class="alert alert-info col-sm-6 col-sm-offset-3">
+                    Please verify your details before going forward!!! 
+            </div>  
 
-    <div class="row">
-        <?php include "includes/confirm_form.php";?>
-    </div>
+            <div class="row">
+                <?php include "includes/confirm_form.php";?>
+            </div>
+        </div>
 
-</div>
+        <!-- Added footer -->
+        <?php include "includes/footer.php"; ?>
 
-<!-- Added footer -->
-<?php include "includes/footer.php"; ?>
-
-</body>
+    </body>
 </html>

@@ -1,9 +1,9 @@
 <?php 
 
 define('DB_HOST',"localhost");
-define('DB_USER',"phpmyadmin");
-define('DB_PASS',"Success");
-define('DB_NAME',"insaid_payment");
+define('DB_USER',"user_name");
+define('DB_PASS',"user_password");
+define('DB_NAME',"insaid_payment");//database name
 
 
 
