@@ -1,4 +1,4 @@
-<div class="col-sm-6 spacer exvalues" style="border-radius: 5px;border: solid 1px #979797;font-family: Helvetica;font-size: 15px;font-weight: normal;font-style: normal;font-stretch: normal;line-height: normal;letter-spacing: 0.6px;color: #002033;">
+        <div class="col-sm-6 spacer exvalues" style="border-radius: 5px;border: solid 1px #979797;font-family: Helvetica;font-size: 15px;font-weight: normal;font-style: normal;font-stretch: normal;line-height: normal;letter-spacing: 0.6px;color: #002033;">
             
             <p style="font-family: Helvetica;font-size: 20px;font-weight: bold;font-style: normal;font-stretch: normal;line-height: normal;letter-spacing: 0.6px;color: #002033;text-align: center;">
                 What’s Included

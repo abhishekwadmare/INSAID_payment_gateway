@@ -10,14 +10,3 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="includes/index.css">
 <meta name="msapplication-TileImage" content="https://www.insaid.co/wp-content/uploads/2018/06/insaid_favicon.png" />
-
-<?php
-  require_once 'db.php';
-  require_once 'razorpay-php/Razorpay.php';
-  
-  use Razorpay\Api\Api;
-  $keyId = 'rzp_test_mZNzawpicVOX3V';
-  $secretKey = 'KK5EOBYgQlRqBlMvCEW8BSpl';
-  $api = new Api($keyId, $secretKey);
-
-?>

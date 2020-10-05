@@ -1,7 +1,7 @@
         <!-- we will add the payment gatway in this given below 4 forms only!!!! -->
             
             
-        <div class="col-xs-4 ordersummary" style="width: 365px; height: 385px; border-radius: 5px; border: solid 1px #979797;">
+        <div class="col-sm-4" style="width: 365px; height: 385px; border-radius: 5px; border: solid 1px #979797;">
     
             <p style="margin-top: 10px !important; color: #9b9b9b;">Program Selected:</p>
             <p style="margin: 0px !important; color: #002033; font-family: Helvetica; font-size: 15px; font-style: normal; font-stretch: normal; font-weight: bold;" id="ProgramName"></p>
@@ -32,27 +32,15 @@
                 </div>
                 
                 <!-- <h6>By clicking Reserve My Seat with Scholarship, you agree to our <a href="https://www.insaid.co/admissions-policy/" target="_blank">terms and conditions</a> and our <a href="https://www.insaid.co/privacypolicy/" target="_blank">privacy policy</a>.</h6> -->
-                <button style="
-                    width: 320px;
-                height: 43.5px;
-                border-radius: 5px;
-                box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.5);
-                border: solid 3px #f5a623;
-                background-image: linear-gradient(to bottom, #fad961, #f76b1c);
-                font-size: 18px;
-                font-weight: bold;
-                    " >
-                <!-- <button style="width: 320px; height: 43.5px; border-radius: 5px; box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.5); border: solid 3px #f5a623; background-image: linear-gradient(to bottom, #fad961, #f76b1c);"> -->
-                    <!-- <b style="font-family: Helvetica; font-size: 17px; font-weight: bold; font-style: normal; font-stretch: normal; line-height: 1.6; letter-spacing: 0.6px; text-align: center; color: #0a406b;"> -->
+                <button class="btn btn-primary form-control">
                         Reserve My Seat with Scholarship 
-                    <!-- </b> -->
                 </button>
             </form>    
 
 
             
             <!-- this form will get activated after GCDAI course is selected -->
-            <form method="POST" id="AIform" action="success.php" style="display: none;">
+            <form method="POST" id="AIform" action="payment_form_confirm.php" style="display: none;">
                 <input type="hidden" value="300000" name="amount">
                 <input type="hidden" value="86,000" name="remainingfee">
                 <input type="hidden" value="Global Certificate in Data Science & AI" name="pname">
@@ -76,27 +64,16 @@
                     </select>
                 </div>
 
-                <script
-                    src="https://checkout.razorpay.com/v1/checkout.js"
-                    data-key="<?php echo $keyId;?>"
-                    data-amount="300000"
-                    data-buttontext="Reserve My Seat with Scholarship"
-                    data-name="INSAID"
-                    data-description="Registration fee for GCDAI"
-                    data-image="https://www.insaid.co/wp-content/uploads/2018/07/logo.png"
-                    data-prefill.name=""
-                    data-prefill.email=""
-                    data-theme.color="#168AFA"
-                ></script>
-
-                <input type="hidden" value="Hidden Element" name="hidden">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary form-control" name="" value="Reserve My Seat with Scholarship">
+                </div>         
 
             </form>
 
 
             
             <!-- this form will get activated after GCD course is selected -->
-            <form method="POST" id="GCDform" action="thankyou_3k_GCD.php" style="display: none;">
+            <form method="POST" id="GCDform" action="payment_form_confirm.php" style="display: none;">
                 
                 <input type="hidden" value="56,000" name="remainingfee">
                 
@@ -127,25 +104,14 @@
                     </select>
                 </div>
                 
-                <script
-                    src="https://checkout.razorpay.com/v1/checkout.js"
-                    data-key="<?php echo $keyId;?>"
-                    data-amount="300000"
-                    data-buttontext="Reserve My Seat with Scholarship"
-                    data-name="INSAID"
-                    data-description="Registration fee for GCD"
-                    data-image="https://www.insaid.co/wp-content/uploads/2018/07/logo.png"
-                    data-prefill.name=""
-                    data-prefill.email=""
-                    data-theme.color="#168AFA"
-                ></script>
-                
-                <input type="hidden" value="Hidden Element" name="hidden">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary form-control" name="" value="Reserve My Seat with Scholarship">
+                </div>
             </form>
 
             
             <!-- this form will get activated after CDF course is selected -->
-            <form method="POST" id="CDFform" action="thankyou_3k_CDF.php" style="display: none;">
+            <form method="POST" id="CDFform" action="payment_form_confirm.php" style="display: none;">
 
                 <input type="hidden" value="26,000" name="remainingfee">
             
@@ -172,20 +138,9 @@
                     </select>
                 </div>
                
-                <script
-                    src="https://checkout.razorpay.com/v1/checkout.js"
-                    data-key="<?php echo $keyId;?>"
-                    data-amount="300000"
-                    data-buttontext="Reserve My Seat with Scholarship"
-                    data-name="INSAID"
-                    data-description="Registration fee for CDF"
-                    data-image="https://www.insaid.co/wp-content/uploads/2018/07/logo.png"
-                    data-prefill.name=""
-                    data-prefill.email=""
-                    data-theme.color="#168AFA"
-                ></script>
-
-                <input type="hidden" value="Hidden Element" name="hidden">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary form-control" name="" value="Reserve My Seat with Scholarship">
+                </div>
 
             </form>
             
